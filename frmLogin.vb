@@ -24,8 +24,9 @@ Public Class frmLogin
         dr = cmd.ExecuteReader()
         If dr.HasRows Then
             dr.Read()
+            CurrentUserId = CInt(dr("userId"))
             MsgBox("Welcome " & dr("role").ToString() & "!", MsgBoxStyle.Information)
-            frmDashboard.Show()
+            frmStaffDashboard.Show()
             Me.Hide()
         Else
             MsgBox("Invalid username or password!", MsgBoxStyle.Critical)

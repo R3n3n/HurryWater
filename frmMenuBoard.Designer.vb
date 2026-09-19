@@ -24,24 +24,24 @@ Partial Class frmMenuBoard
     Private Sub InitializeComponent()
         Me.SplitContainerMain = New System.Windows.Forms.SplitContainer()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDashboard = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnCustomers = New System.Windows.Forms.Button()
-        Me.btnSalesDelivery = New System.Windows.Forms.Button()
-        Me.btnProduction = New System.Windows.Forms.Button()
-        Me.btnInventory = New System.Windows.Forms.Button()
-        Me.btnExpenses = New System.Windows.Forms.Button()
-        Me.btnDispenserBorrowing = New System.Windows.Forms.Button()
-        Me.btnReports = New System.Windows.Forms.Button()
-        Me.btnUserManagement = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnUserManagement = New System.Windows.Forms.Button()
+        Me.btnReports = New System.Windows.Forms.Button()
+        Me.btnDispenserBorrowing = New System.Windows.Forms.Button()
+        Me.btnExpenses = New System.Windows.Forms.Button()
+        Me.btnInventory = New System.Windows.Forms.Button()
+        Me.btnProduction = New System.Windows.Forms.Button()
+        Me.btnSalesDelivery = New System.Windows.Forms.Button()
+        Me.btnCustomers = New System.Windows.Forms.Button()
         CType(Me.SplitContainerMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainerMain.Panel1.SuspendLayout()
         Me.SplitContainerMain.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainerMain
@@ -55,6 +55,9 @@ Partial Class frmMenuBoard
         Me.SplitContainerMain.Panel1.BackColor = System.Drawing.Color.DarkBlue
         Me.SplitContainerMain.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.SplitContainerMain.Panel1.ForeColor = System.Drawing.Color.Black
+        '
+        'SplitContainerMain.Panel2
+        '
         Me.SplitContainerMain.Size = New System.Drawing.Size(1358, 871)
         Me.SplitContainerMain.SplitterDistance = 244
         Me.SplitContainerMain.TabIndex = 0
@@ -78,19 +81,6 @@ Partial Class frmMenuBoard
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(244, 871)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(56, 93)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 29)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Username"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
         'txtDashboard
         '
         Me.txtDashboard.Anchor = System.Windows.Forms.AnchorStyles.Bottom
@@ -105,6 +95,30 @@ Partial Class frmMenuBoard
         Me.txtDashboard.Text = "Dashboard"
         Me.txtDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.txtDashboard.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(56, 93)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(132, 29)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Username"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PictureBox1.Image = Global.HurryWater.My.Resources.Resources.AccountLogo
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(238, 87)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'TableLayoutPanel2
         '
@@ -133,89 +147,19 @@ Partial Class frmMenuBoard
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(238, 630)
         Me.TableLayoutPanel2.TabIndex = 7
         '
-        'btnCustomers
+        'btnUserManagement
         '
-        Me.btnCustomers.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnCustomers.FlatAppearance.BorderSize = 0
-        Me.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCustomers.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCustomers.ForeColor = System.Drawing.Color.White
-        Me.btnCustomers.Location = New System.Drawing.Point(3, 3)
-        Me.btnCustomers.Name = "btnCustomers"
-        Me.btnCustomers.Size = New System.Drawing.Size(232, 72)
-        Me.btnCustomers.TabIndex = 7
-        Me.btnCustomers.Text = "Customers"
-        Me.btnCustomers.UseVisualStyleBackColor = True
-        '
-        'btnSalesDelivery
-        '
-        Me.btnSalesDelivery.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnSalesDelivery.FlatAppearance.BorderSize = 0
-        Me.btnSalesDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalesDelivery.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalesDelivery.ForeColor = System.Drawing.Color.White
-        Me.btnSalesDelivery.Location = New System.Drawing.Point(3, 81)
-        Me.btnSalesDelivery.Name = "btnSalesDelivery"
-        Me.btnSalesDelivery.Size = New System.Drawing.Size(232, 72)
-        Me.btnSalesDelivery.TabIndex = 8
-        Me.btnSalesDelivery.Text = "Sales / Delivery"
-        Me.btnSalesDelivery.UseVisualStyleBackColor = True
-        '
-        'btnProduction
-        '
-        Me.btnProduction.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnProduction.FlatAppearance.BorderSize = 0
-        Me.btnProduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnProduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProduction.ForeColor = System.Drawing.Color.White
-        Me.btnProduction.Location = New System.Drawing.Point(3, 159)
-        Me.btnProduction.Name = "btnProduction"
-        Me.btnProduction.Size = New System.Drawing.Size(232, 72)
-        Me.btnProduction.TabIndex = 9
-        Me.btnProduction.Text = "Production"
-        Me.btnProduction.UseVisualStyleBackColor = True
-        '
-        'btnInventory
-        '
-        Me.btnInventory.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnInventory.FlatAppearance.BorderSize = 0
-        Me.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInventory.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventory.ForeColor = System.Drawing.Color.White
-        Me.btnInventory.Location = New System.Drawing.Point(3, 237)
-        Me.btnInventory.Name = "btnInventory"
-        Me.btnInventory.Size = New System.Drawing.Size(232, 72)
-        Me.btnInventory.TabIndex = 10
-        Me.btnInventory.Text = "Inventory"
-        Me.btnInventory.UseVisualStyleBackColor = True
-        '
-        'btnExpenses
-        '
-        Me.btnExpenses.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnExpenses.FlatAppearance.BorderSize = 0
-        Me.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExpenses.ForeColor = System.Drawing.Color.White
-        Me.btnExpenses.Location = New System.Drawing.Point(3, 315)
-        Me.btnExpenses.Name = "btnExpenses"
-        Me.btnExpenses.Size = New System.Drawing.Size(232, 72)
-        Me.btnExpenses.TabIndex = 11
-        Me.btnExpenses.Text = "Expenses"
-        Me.btnExpenses.UseVisualStyleBackColor = True
-        '
-        'btnDispenserBorrowing
-        '
-        Me.btnDispenserBorrowing.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnDispenserBorrowing.FlatAppearance.BorderSize = 0
-        Me.btnDispenserBorrowing.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDispenserBorrowing.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDispenserBorrowing.ForeColor = System.Drawing.Color.White
-        Me.btnDispenserBorrowing.Location = New System.Drawing.Point(3, 393)
-        Me.btnDispenserBorrowing.Name = "btnDispenserBorrowing"
-        Me.btnDispenserBorrowing.Size = New System.Drawing.Size(232, 72)
-        Me.btnDispenserBorrowing.TabIndex = 12
-        Me.btnDispenserBorrowing.Text = "Dispenser Borrowing"
-        Me.btnDispenserBorrowing.UseVisualStyleBackColor = True
+        Me.btnUserManagement.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnUserManagement.FlatAppearance.BorderSize = 0
+        Me.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUserManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUserManagement.ForeColor = System.Drawing.Color.White
+        Me.btnUserManagement.Location = New System.Drawing.Point(3, 549)
+        Me.btnUserManagement.Name = "btnUserManagement"
+        Me.btnUserManagement.Size = New System.Drawing.Size(232, 78)
+        Me.btnUserManagement.TabIndex = 14
+        Me.btnUserManagement.Text = "User Management"
+        Me.btnUserManagement.UseVisualStyleBackColor = True
         '
         'btnReports
         '
@@ -231,30 +175,89 @@ Partial Class frmMenuBoard
         Me.btnReports.Text = "Reports"
         Me.btnReports.UseVisualStyleBackColor = True
         '
-        'btnUserManagement
+        'btnDispenserBorrowing
         '
-        Me.btnUserManagement.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnUserManagement.FlatAppearance.BorderSize = 0
-        Me.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUserManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUserManagement.ForeColor = System.Drawing.Color.White
-        Me.btnUserManagement.Location = New System.Drawing.Point(3, 549)
-        Me.btnUserManagement.Name = "btnUserManagement"
-        Me.btnUserManagement.Size = New System.Drawing.Size(232, 78)
-        Me.btnUserManagement.TabIndex = 14
-        Me.btnUserManagement.Text = "User Management"
-        Me.btnUserManagement.UseVisualStyleBackColor = True
+        Me.btnDispenserBorrowing.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnDispenserBorrowing.FlatAppearance.BorderSize = 0
+        Me.btnDispenserBorrowing.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDispenserBorrowing.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDispenserBorrowing.ForeColor = System.Drawing.Color.White
+        Me.btnDispenserBorrowing.Location = New System.Drawing.Point(3, 393)
+        Me.btnDispenserBorrowing.Name = "btnDispenserBorrowing"
+        Me.btnDispenserBorrowing.Size = New System.Drawing.Size(232, 72)
+        Me.btnDispenserBorrowing.TabIndex = 12
+        Me.btnDispenserBorrowing.Text = "Dispenser Borrowing"
+        Me.btnDispenserBorrowing.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'btnExpenses
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PictureBox1.Image = Global.HurryWater.My.Resources.Resources.AccountLogo
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(238, 87)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.btnExpenses.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnExpenses.FlatAppearance.BorderSize = 0
+        Me.btnExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExpenses.ForeColor = System.Drawing.Color.White
+        Me.btnExpenses.Location = New System.Drawing.Point(3, 315)
+        Me.btnExpenses.Name = "btnExpenses"
+        Me.btnExpenses.Size = New System.Drawing.Size(232, 72)
+        Me.btnExpenses.TabIndex = 11
+        Me.btnExpenses.Text = "Expenses"
+        Me.btnExpenses.UseVisualStyleBackColor = True
+        '
+        'btnInventory
+        '
+        Me.btnInventory.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnInventory.FlatAppearance.BorderSize = 0
+        Me.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnInventory.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInventory.ForeColor = System.Drawing.Color.White
+        Me.btnInventory.Location = New System.Drawing.Point(3, 237)
+        Me.btnInventory.Name = "btnInventory"
+        Me.btnInventory.Size = New System.Drawing.Size(232, 72)
+        Me.btnInventory.TabIndex = 10
+        Me.btnInventory.Text = "Inventory"
+        Me.btnInventory.UseVisualStyleBackColor = True
+        '
+        'btnProduction
+        '
+        Me.btnProduction.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnProduction.FlatAppearance.BorderSize = 0
+        Me.btnProduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnProduction.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnProduction.ForeColor = System.Drawing.Color.White
+        Me.btnProduction.Location = New System.Drawing.Point(3, 159)
+        Me.btnProduction.Name = "btnProduction"
+        Me.btnProduction.Size = New System.Drawing.Size(232, 72)
+        Me.btnProduction.TabIndex = 9
+        Me.btnProduction.Text = "Production"
+        Me.btnProduction.UseVisualStyleBackColor = True
+        '
+        'btnSalesDelivery
+        '
+        Me.btnSalesDelivery.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSalesDelivery.FlatAppearance.BorderSize = 0
+        Me.btnSalesDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalesDelivery.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalesDelivery.ForeColor = System.Drawing.Color.White
+        Me.btnSalesDelivery.Location = New System.Drawing.Point(3, 81)
+        Me.btnSalesDelivery.Name = "btnSalesDelivery"
+        Me.btnSalesDelivery.Size = New System.Drawing.Size(232, 72)
+        Me.btnSalesDelivery.TabIndex = 8
+        Me.btnSalesDelivery.Text = "Sales / Delivery"
+        Me.btnSalesDelivery.UseVisualStyleBackColor = True
+        '
+        'btnCustomers
+        '
+        Me.btnCustomers.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnCustomers.FlatAppearance.BorderSize = 0
+        Me.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCustomers.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCustomers.ForeColor = System.Drawing.Color.White
+        Me.btnCustomers.Location = New System.Drawing.Point(3, 3)
+        Me.btnCustomers.Name = "btnCustomers"
+        Me.btnCustomers.Size = New System.Drawing.Size(232, 72)
+        Me.btnCustomers.TabIndex = 7
+        Me.btnCustomers.Text = "Customers"
+        Me.btnCustomers.UseVisualStyleBackColor = True
         '
         'frmMenuBoard
         '
@@ -271,8 +274,8 @@ Partial Class frmMenuBoard
         Me.SplitContainerMain.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
