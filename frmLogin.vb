@@ -23,8 +23,8 @@ Public Class frmLogin
 
         dr = cmd.ExecuteReader()
         If dr.HasRows Then
-            dr.Read()
             CurrentUserId = CInt(dr("userId"))
+            dr.Read()
             MsgBox("Welcome " & dr("role").ToString() & "!", MsgBoxStyle.Information)
             frmStaffDashboard.Show()
             Me.Hide()
