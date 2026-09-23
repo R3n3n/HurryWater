@@ -2,6 +2,23 @@
 
 Public Class frmSalesDelivery
 
+    Private isLoading As Boolean = True
+
+    Private Sub frmSalesDelivery_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetupListView()
+
+        If cboFilterPickup.Items.Count = 0 Then
+            cboFilterPickup.Items.AddRange({"All pickup statuses", "Pending", "Picked-up", "Delivered", "Missed"})
+        End If
+        If cboFilterPayment.Items.Count = 0 Then
+            cboFilterPayment.Items.AddRange({"All payment statuses", "Paid", "Unpaid"})
+        End If
+        cboFilterPickup.SelectedIndex = 0
+        cboFilterPayment.SelectedIndex = 0
+
+        isLoading = False
+        LoadOrderList()
+    End Sub
     Private Sub SetupListView()
         lsvOrders.View = View.Details
         lsvOrders.FullRowSelect = True

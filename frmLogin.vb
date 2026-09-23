@@ -6,38 +6,51 @@ Public Class frmLogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Call connection()
-
-        If txtUsername.Text = "" Or txtPassword.Text = "" Then
+        If txtUsername.Text = "" OrElse txtPassword.Text = "" Then
             MsgBox("Please enter information for username and password.")
-            Exit Sub
+            Return
         End If
 
-        sql = "SELECT * FROM tblusers WHERE username = @username AND passwordHash = @password"
-        cmd = New MySqlCommand(sql, cn)
-        With cmd
-            .Parameters.AddWithValue("@username", txtUsername.Text)
-            .Parameters.AddWithValue("@password", txtPassword.Text)
-            .ExecuteNonQuery()
-        End With
+        Dim userId As Integer = 0
+        Dim role As String = ""
 
-        dr = cmd.ExecuteReader()
-        If dr.HasRows Then
-            CurrentUserId = CInt(dr("userId"))
-            dr.Read()
-            MsgBox("Welcome " & dr("role").ToString() & "!", MsgBoxStyle.Information)
-            frmStaffDashboard.Show()
-            Me.Hide()
-        Else
+        Try
+            connection()
+            sql = "SELECT userId, role FROM tblusers " &
+              "WHERE username = @username AND passwordHash = @password AND status = 'Active'"
+            cmd = New MySqlCommand(sql, cn)
+            cmd.Parameters.AddWithValue("@username", txtUsername.Text)
+            cmd.Parameters.AddWithValue("@password", txtPassword.Text)
+
+            dr = cmd.ExecuteReader()
+            If dr.Read() Then                     ' Read() BEFORE touching columns
+                userId = CInt(dr("userId"))
+                role = dr("role").ToString()
+            End If
+            dr.Close()
+        Catch ex As Exception
+            MsgBox("Login error: " & ex.Message, MsgBoxStyle.Critical)
+            Return
+        Finally
+            If cn.State = ConnectionState.Open Then cn.Close()
+        End Try
+
+        If userId = 0 Then
             MsgBox("Invalid username or password!", MsgBoxStyle.Critical)
-            Exit Sub
+            Return
         End If
 
-        dr.Close()
+        CurrentUserId = userId
+        MsgBox("Welcome " & role & "!", MsgBoxStyle.Information)
+
         txtUsername.Clear()
         txtPassword.Clear()
-        txtUsername.Focus()
-        cn.Close()
+
+        If role = "Owner" Then
+            frmOwnerDashboard.Show()
+        Else
+            frmStaffDashboard.Show()
+        End If
         Me.Hide()
     End Sub
 

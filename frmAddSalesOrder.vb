@@ -11,6 +11,9 @@ Public Class frmAddSalesOrder
             nud.DecimalPlaces = 2
         Next
 
+        LoadCustomers()
+        LoadProductsIntoAllRows()
+
         RecalculateGrandTotal()
     End Sub
 
