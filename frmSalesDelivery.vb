@@ -25,11 +25,11 @@ Public Class frmSalesDelivery
         lsvOrders.GridLines = True
 
         lsvOrders.Columns.Clear()
-        lsvOrders.Columns.Add("Order Date", 110)
-        lsvOrders.Columns.Add("Customer", 230)
-        lsvOrders.Columns.Add("Pickup Status", 120)
-        lsvOrders.Columns.Add("Payment", 100)
-        lsvOrders.Columns.Add("Total", 110)
+        lsvOrders.Columns.Add("Order Date", 200)
+        lsvOrders.Columns.Add("Customer", 320)
+        lsvOrders.Columns.Add("Pickup Status", 190)
+        lsvOrders.Columns.Add("Payment", 130)
+        lsvOrders.Columns.Add("Total", 300)
     End Sub
     Private Sub LoadOrderList()
         lsvOrders.Items.Clear()

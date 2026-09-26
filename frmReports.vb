@@ -27,9 +27,9 @@ Public Class frmReports
         lsvCustomerSummary.FullRowSelect = True
         lsvCustomerSummary.GridLines = True
         lsvCustomerSummary.Columns.Clear()
-        lsvCustomerSummary.Columns.Add("Customer", 220)
-        lsvCustomerSummary.Columns.Add("Orders", 90)
-        lsvCustomerSummary.Columns.Add("Outstanding", 120)
+        lsvCustomerSummary.Columns.Add("Customer", 300)
+        lsvCustomerSummary.Columns.Add("Orders", 120)
+        lsvCustomerSummary.Columns.Add("Outstanding", 600)
     End Sub
 
     ' --- Date range selection -----------------------------------------

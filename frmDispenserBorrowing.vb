@@ -13,11 +13,11 @@ Public Class frmDispenserBorrowing
         lsvBorrowing.GridLines = True
 
         lsvBorrowing.Columns.Clear()
-        lsvBorrowing.Columns.Add("Customer", 220)
-        lsvBorrowing.Columns.Add("Dispenser Ref.", 130)
-        lsvBorrowing.Columns.Add("Borrowed", 110)
-        lsvBorrowing.Columns.Add("Expected Return", 130)
-        lsvBorrowing.Columns.Add("Status", 100)
+        lsvBorrowing.Columns.Add("Customer", 200)
+        lsvBorrowing.Columns.Add("Dispenser Ref.", 220)
+        lsvBorrowing.Columns.Add("Borrowed", 180)
+        lsvBorrowing.Columns.Add("Expected Return", 240)
+        lsvBorrowing.Columns.Add("Status", 180)
     End Sub
 
     ''' <summary>

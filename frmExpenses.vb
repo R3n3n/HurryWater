@@ -14,10 +14,10 @@ Public Class frmExpenses
         lsvExpenses.GridLines = True
 
         lsvExpenses.Columns.Clear()
-        lsvExpenses.Columns.Add("Date", 110)
-        lsvExpenses.Columns.Add("Category", 120)
-        lsvExpenses.Columns.Add("Amount", 110)
-        lsvExpenses.Columns.Add("Description", 300)
+        lsvExpenses.Columns.Add("Date", 200)
+        lsvExpenses.Columns.Add("Category", 180)
+        lsvExpenses.Columns.Add("Amount", 180)
+        lsvExpenses.Columns.Add("Description", 500)
     End Sub
 
     ''' <summary>

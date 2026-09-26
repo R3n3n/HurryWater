@@ -13,10 +13,10 @@ Public Class frmUserManagement
         lsvUsers.GridLines = True
 
         lsvUsers.Columns.Clear()
-        lsvUsers.Columns.Add("Name", 200)
-        lsvUsers.Columns.Add("Username", 150)
-        lsvUsers.Columns.Add("Role", 100)
-        lsvUsers.Columns.Add("Status", 100)
+        lsvUsers.Columns.Add("Name", 260)
+        lsvUsers.Columns.Add("Username", 260)
+        lsvUsers.Columns.Add("Role", 150)
+        lsvUsers.Columns.Add("Status", 350)
     End Sub
 
     Private Sub LoadUserList()

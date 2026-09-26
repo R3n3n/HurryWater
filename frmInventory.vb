@@ -20,7 +20,7 @@ Public Class frmInventory
         lsvInventory.Columns.Add("Reorder At", 120, HorizontalAlignment.Right)
         lsvInventory.Columns.Add("Unit Cost", 110, HorizontalAlignment.Right)
         lsvInventory.Columns.Add("Value", 130, HorizontalAlignment.Right)
-        lsvInventory.Columns.Add("Status", 90)
+        lsvInventory.Columns.Add("Status", 180)
     End Sub
 
     ' 1500 -> "1,500"   12.5 -> "12.5"   0 -> "0"

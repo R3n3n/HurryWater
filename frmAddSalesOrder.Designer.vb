@@ -436,6 +436,7 @@ Partial Class frmAddSalesOrder
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblCustomers)
         Me.Name = "frmAddSalesOrder"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmAddSalesOrder"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
