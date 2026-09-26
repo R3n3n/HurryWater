@@ -22,26 +22,27 @@ Partial Class frmUserManagement
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnAddCustomer = New System.Windows.Forms.Button()
+        Me.btnAddUser = New System.Windows.Forms.Button()
         Me.lblCustomers = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lsvDispenserBorrowing = New System.Windows.Forms.ListView()
+        Me.lsvUsers = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnToggleStatus = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnAddCustomer
+        'btnAddUser
         '
-        Me.btnAddCustomer.BackColor = System.Drawing.Color.RoyalBlue
-        Me.btnAddCustomer.FlatAppearance.BorderSize = 0
-        Me.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddCustomer.ForeColor = System.Drawing.Color.White
-        Me.btnAddCustomer.Location = New System.Drawing.Point(808, 27)
-        Me.btnAddCustomer.Name = "btnAddCustomer"
-        Me.btnAddCustomer.Size = New System.Drawing.Size(233, 58)
-        Me.btnAddCustomer.TabIndex = 13
-        Me.btnAddCustomer.Text = "+ Add Staff Account"
-        Me.btnAddCustomer.UseVisualStyleBackColor = False
+        Me.btnAddUser.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnAddUser.FlatAppearance.BorderSize = 0
+        Me.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddUser.ForeColor = System.Drawing.Color.White
+        Me.btnAddUser.Location = New System.Drawing.Point(808, 44)
+        Me.btnAddUser.Name = "btnAddUser"
+        Me.btnAddUser.Size = New System.Drawing.Size(233, 58)
+        Me.btnAddUser.TabIndex = 13
+        Me.btnAddUser.Text = "+ Add Staff Account"
+        Me.btnAddUser.UseVisualStyleBackColor = False
         '
         'lblCustomers
         '
@@ -63,29 +64,44 @@ Partial Class frmUserManagement
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Owner's only screen"
         '
-        'lsvDispenserBorrowing
+        'lsvUsers
         '
-        Me.lsvDispenserBorrowing.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
-        Me.lsvDispenserBorrowing.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lsvDispenserBorrowing.HideSelection = False
-        Me.lsvDispenserBorrowing.Location = New System.Drawing.Point(33, 137)
-        Me.lsvDispenserBorrowing.Name = "lsvDispenserBorrowing"
-        Me.lsvDispenserBorrowing.Size = New System.Drawing.Size(1008, 518)
-        Me.lsvDispenserBorrowing.TabIndex = 15
-        Me.lsvDispenserBorrowing.UseCompatibleStateImageBehavior = False
+        Me.lsvUsers.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
+        Me.lsvUsers.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lsvUsers.HideSelection = False
+        Me.lsvUsers.Location = New System.Drawing.Point(33, 137)
+        Me.lsvUsers.Name = "lsvUsers"
+        Me.lsvUsers.Size = New System.Drawing.Size(1008, 518)
+        Me.lsvUsers.TabIndex = 15
+        Me.lsvUsers.UseCompatibleStateImageBehavior = False
         '
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Customer"
+        '
+        'btnToggleStatus
+        '
+        Me.btnToggleStatus.BackColor = System.Drawing.Color.White
+        Me.btnToggleStatus.FlatAppearance.BorderSize = 0
+        Me.btnToggleStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnToggleStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnToggleStatus.ForeColor = System.Drawing.Color.Black
+        Me.btnToggleStatus.Location = New System.Drawing.Point(572, 44)
+        Me.btnToggleStatus.Name = "btnToggleStatus"
+        Me.btnToggleStatus.Size = New System.Drawing.Size(218, 58)
+        Me.btnToggleStatus.TabIndex = 16
+        Me.btnToggleStatus.Text = "Deactivate / Activate"
+        Me.btnToggleStatus.UseVisualStyleBackColor = False
         '
         'frmUserManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1072, 694)
-        Me.Controls.Add(Me.lsvDispenserBorrowing)
+        Me.Controls.Add(Me.btnToggleStatus)
+        Me.Controls.Add(Me.lsvUsers)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.btnAddCustomer)
+        Me.Controls.Add(Me.btnAddUser)
         Me.Controls.Add(Me.lblCustomers)
         Me.Name = "frmUserManagement"
         Me.Text = "frmUserManagement"
@@ -94,9 +110,10 @@ Partial Class frmUserManagement
 
     End Sub
 
-    Friend WithEvents btnAddCustomer As Button
+    Friend WithEvents btnAddUser As Button
     Friend WithEvents lblCustomers As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents lsvDispenserBorrowing As ListView
+    Friend WithEvents lsvUsers As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents btnToggleStatus As Button
 End Class
